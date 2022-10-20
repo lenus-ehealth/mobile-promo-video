@@ -6,7 +6,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Phone} from '../RealStickers/Phone';
-import screen from '../RealStickers/screen.jpg';
+import screen from '../RealStickers/screen.png';
 import screen2 from '../RealStickers/screen2.png';
 import screen3 from '../RealStickers/screen3.png';
 import screen4 from '../RealStickers/screen4.png';

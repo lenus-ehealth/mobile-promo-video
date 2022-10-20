@@ -1,6 +1,6 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Phone} from './RealStickers/Phone';
-import screen from './RealStickers/screen.jpg';
+import screen from './RealStickers/screen.png';
 export const JumpPhone: React.FC<{
 	phoneScale: number;
 }> = ({phoneScale}) => {

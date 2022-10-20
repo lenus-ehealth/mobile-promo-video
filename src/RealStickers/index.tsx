@@ -124,7 +124,7 @@ const RealStickers: React.FC<{
 					return (
 						<Img
 							key={o.source}
-							src={`https://anysticker.imgix.net/${o.source}?w=${stickerSize}&h=${stickerSize}&fm=png&fill=solid&fit=fill&auto=compress`}
+							src={o.source}
 							style={{
 								position: 'absolute',
 								left: point.x - stickerSize / 2,

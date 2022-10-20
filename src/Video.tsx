@@ -12,21 +12,13 @@ export const RemotionVideo: React.FC = () => {
 			<Composition
 				component={Welcome}
 				id="Welcome"
-				durationInFrames={31 * 30}
+				durationInFrames={31 * 35}
 				width={1080}
 				height={1920}
 				fps={30}
 				defaultProps={{
 					phoneScale: 1,
 				}}
-			/>
-			<Composition
-				id="springy"
-				lazyComponent={() => import('./Springy')}
-				width={1080}
-				height={1920}
-				fps={30}
-				durationInFrames={60}
 			/>
 			<Composition
 				id="screen-showcase"

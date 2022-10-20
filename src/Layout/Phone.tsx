@@ -3,7 +3,7 @@ import {Img} from 'remotion';
 import styled from 'styled-components';
 
 export const PhoneWidth = 100;
-export const PhoneHeight = 200;
+export const PhoneHeight = 150;
 
 const Container = styled.div`
 	width: ${PhoneWidth}px;
@@ -23,10 +23,23 @@ export const Phone: React.FC<
 			<Img
 				src={src}
 				style={{
+					top: 12,
+					paddingRight: 50,
+					paddingLeft: 50,
 					height: PhoneHeight,
-					width: PhoneHeight,
 					marginLeft: -PhoneWidth / 2,
 					position: 'absolute',
+					transform: `scale(${phoneScale})`,
+				}}
+			/>
+			<Img
+				src={require("../assets/frame.png")}
+				style={{
+					position: 'absolute',
+					paddingRight: 50,
+					paddingLeft: 50,
+					height: PhoneHeight + 33,
+					marginLeft: -PhoneWidth * 1.78,
 					transform: `scale(${phoneScale})`,
 				}}
 			/>

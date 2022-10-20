@@ -1,120 +1,92 @@
 import React from 'react';
-import {Audio, Series} from 'remotion';
-import BigRotate from '../BigRotate';
+import {Audio, Series, Video} from 'remotion';
 import EndLogo from '../Circle';
 import Layout from '../Layout';
 import RealStickers from '../RealStickers';
 import ScreenShowcase from '../ScreenShowcase';
-import Springy from '../Springy';
 import {Title} from '../Title';
 import {Transition} from '../Transition';
 import audio from './audio.mp4';
 
+
 export const Welcome: React.FC<{
 	phoneScale: number;
 }> = ({phoneScale}) => {
-	const yourselfGetImage = (f: number) =>
-		require('./stickerify-yourself/Untitled Frame ' + (f + 20) + '.png');
-	const objectGetImage = (f: number) =>
-		require('./stickerify-object/Untitled Frame ' + (f + 4) + '.png');
-	const objectGetScroll = (f: number) =>
-		require('./scroll-packs/Untitled Frame ' + (f + 1) + '.png');
-	const objectGetThousands = (f: number) =>
-		require('./thousands-packs/Untitled Frame ' + (f + 6) + '.png');
-	const objectGetReorder = (f: number) =>
-		require('./reorder-stickers/Untitled Frame ' + (f + 70) + '.png');
-	const objectGetJuicy = (f: number) =>
-		require('./juicy/Untitled Frame ' + (f + 1) + '.png');
+
+	const objectGetImages = (name:string) =>  (f: number) =>
+		require(`./${name}/` + (f + 1) + '.png');
 
 	return (
-		<div style={{flex: 1, display: 'flex', backgroundColor: 'white'}}>
+		<div style={{flex: 1, display: 'flex', backgroundColor: '#72986d'}}>
 			<Series>
-				<Series.Sequence durationInFrames={40}>
-					<BigRotate />
-				</Series.Sequence>
-				<Series.Sequence durationInFrames={60}>
-					<Title line1="Welcome to" line2="AnySticker" />
-				</Series.Sequence>
 				<Series.Sequence durationInFrames={70}>
-					<Layout />
+					<Title line1="Welcome to" line2="Coach Ducky Duck" />
 				</Series.Sequence>
-				<Series.Sequence durationInFrames={80}>
+				
+				<Series.Sequence durationInFrames={174}>
 					<Transition type="out">
 						<ScreenShowcase
 							animateIn
-							title="Stickerize yourself"
-							getImage={yourselfGetImage}
+							title="Chat with coach"
+							getImage={objectGetImages("chat")}
 						/>
 					</Transition>
 				</Series.Sequence>
+				<Series.Sequence durationInFrames={110}>
+					<Transition type="in">
+						<Transition type="out">
+							<ScreenShowcase
+								title="Customize Workout"
+								getImage={objectGetImages("workout")}
+								animateIn={false}
+							/>
+						</Transition>
+					</Transition>
+				</Series.Sequence>
+				<Series.Sequence durationInFrames={240}>
+					<Transition type="in">
+						<Transition type="out">
+							<ScreenShowcase
+								title="Get meal plan"
+								getImage={objectGetImages("meals")}
+								animateIn={false}
+							/>
+						</Transition>
+					</Transition>
+				</Series.Sequence>
+				
+				<Series.Sequence durationInFrames={99}>
+					<Transition type="in">
+						<Transition type="out">
+							<ScreenShowcase
+								title="Join the community"
+								getImage={objectGetImages("groups")}
+								animateIn={false}
+							/>
+						</Transition>
+					</Transition>
+				</Series.Sequence>
+
 				<Series.Sequence durationInFrames={70}>
-					<Transition type="in">
-						<Transition type="out">
-							<ScreenShowcase
-								title="Stickerize anything"
-								getImage={objectGetImage}
-								animateIn={false}
-							/>
-						</Transition>
-					</Transition>
+					<Title line1="All You Need" line2="In One Place" />
 				</Series.Sequence>
-				<Series.Sequence durationInFrames={60}>
-					<Transition type="in">
-						<Transition type="out">
-							<ScreenShowcase
-								title="Explore sticker packs"
-								getImage={objectGetScroll}
-								animateIn={false}
-							/>
-						</Transition>
-					</Transition>
+
+				<Series.Sequence durationInFrames={70}>
+					<Layout />
 				</Series.Sequence>
-				<Series.Sequence durationInFrames={60}>
-					<Transition type="in">
-						<Transition type="out">
-							<ScreenShowcase
-								title="Thousands of stickers"
-								getImage={objectGetThousands}
-								animateIn={false}
-							/>
-						</Transition>
-					</Transition>
-				</Series.Sequence>
-				<Series.Sequence durationInFrames={80}>
-					<Transition type="in">
-						<Transition type="out">
-							<ScreenShowcase
-								title="Collect stickers"
-								getImage={objectGetReorder}
-								animateIn={false}
-							/>
-						</Transition>
-					</Transition>
-				</Series.Sequence>
-				<Series.Sequence durationInFrames={90}>
-					<Transition type="in">
-						<Transition type="out">
-							<ScreenShowcase
-								title="Share anywhere"
-								getImage={objectGetJuicy}
-								animateIn={false}
-							/>
-						</Transition>
-					</Transition>
-				</Series.Sequence>
+				
 				<Series.Sequence durationInFrames={90}>
 					<RealStickers phoneScale={phoneScale} />
 				</Series.Sequence>
-				<Series.Sequence durationInFrames={70}>
-					<Title line1="The power is" line2="in your hands." />
+
+				<Series.Sequence durationInFrames={90}>
+					<Title line1="Your Health Revolution" line2="Starts here." />
 				</Series.Sequence>
-				<Series.Sequence durationInFrames={100}>
-					<Springy />
-				</Series.Sequence>
-				<Series.Sequence durationInFrames={75}>
+				{/* <Series.Sequence durationInFrames={75}>
 					<EndLogo />
-				</Series.Sequence>
+				</Series.Sequence> */}
 			</Series>
+			
 			<Audio src={audio} />
 		</div>
 	);

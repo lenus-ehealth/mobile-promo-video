@@ -67,67 +67,11 @@ export const Orchestra: React.FC<{
 									const offset = r % 2 === 1 ? xOffset : 0;
 									const extraLeft = r % 2 === 1 ? xOffset : 0;
 									const middle = r === 7 && c === 2;
-									const source = (() => {
-										if (c === 2 && r === 7) {
-											return require('./screens/start.png');
-										}
-										if (c === 2 && r === 8) {
-											return require('./screens/tutorial.png');
-										}
-										if (c === 2 && r === 9) {
-											return require('./screens/cheesy.png');
-										}
-										if (c === 1 && r === 4) {
-											return require('./screens/icons.png');
-										}
-										if (c === 2 && r === 4) {
-											return require('./screens/packs.png');
-										}
-										if (c === 2 && r === 10) {
-											return require('./screens/createpack.png');
-										}
-										if (c === 1 && r === 8) {
-											return require('./screens/collections.png');
-										}
-										if (c === 3 && r === 11) {
-											return require('./screens/createpack.png');
-										}
-										if (c === 1 && r === 11) {
-											return require('./screens/publish.png');
-										}
-										if (c === 1 && r === 6) {
-											return require('./screens/share.png');
-										}
-										if (c === 2 && r === 6) {
-											return require('./screens/face.png');
-										}
-										if (c === 3 && r === 5) {
-											return require('./screens/debug.png');
-										}
-										if (c === 3 && r === 7) {
-											return require('./screens/fruits.png');
-										}
-										if (c === 1 && r === 7) {
-											return require('./screens/watermelon.png');
-										}
-										if (c === 1 && r === 9) {
-											return require('./screens/pack2.png');
-										}
-										if (c === 1 && r === 2) {
-											return require('./screens/settings.png');
-										}
-										if (c === 3 && r === 9) {
-											return require('./screens/yes.png');
-										}
-										if (c === 2 && r === 2) {
-											return require('./screens/garden.png');
-										}
-										return require('../assets/packs.png');
-									})();
+									
 									return (
 										<Phone
 											key={[c, r].join(',')}
-											src={source}
+											src={require('./screens/10.png')}
 											className={`c${c}r${r}`}
 											phoneScale={middle ? phoneScale : scale}
 											style={{

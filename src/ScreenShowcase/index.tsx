@@ -16,10 +16,7 @@ type Props = {
 
 const ScreenShowcase: React.FC<Props> = ({
 	title = 'Hi',
-	getImage = (f) =>
-		require('../Welcome/stickerify-yourself/Untitled Frame ' +
-			(f + 1) +
-			'.png'),
+	getImage,
 	animateIn = true,
 }) => {
 	const frame = useCurrentFrame();
@@ -52,11 +49,11 @@ const ScreenShowcase: React.FC<Props> = ({
 				style={{
 					fontSize: 80,
 					fontWeight: 'bold',
-					fontFamily: 'SF Pro Text',
 					width: '100%',
 					position: 'absolute',
 					textAlign: 'center',
-					top: 160,
+					top: 230,
+					color: 'white',
 					transform: `scale(${progress}) translateY(${(1 - base) * 50}px)`,
 				}}
 			>
@@ -67,7 +64,19 @@ const ScreenShowcase: React.FC<Props> = ({
 				style={{
 					position: 'absolute',
 					transform: `scale(${1.5 * progress})`,
-					top: 500,
+					top: 700,
+					width: 1080/3,
+					marginLeft:1080 /3,
+				}}
+			/>
+			<Img
+				src={require("../assets/frame.png")}
+				style={{
+					position: 'absolute',
+					top: 623,
+					width: 1080 * 1.55,
+					marginLeft:-1080 * 0.276 ,
+					transform: `scale(${1.5 * progress})`,
 				}}
 			/>
 		</div>
