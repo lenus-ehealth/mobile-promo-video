@@ -53,7 +53,7 @@ export const Announcement: React.FC = () => {
 						{
 							extrapolateLeft: 'clamp',
 						}
-					)
+				)
 				}
 			/>
 		</AbsoluteFill>

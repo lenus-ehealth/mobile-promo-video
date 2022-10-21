@@ -7,7 +7,8 @@ import ScreenShowcase from '../ScreenShowcase';
 import {Title} from '../Title';
 import {Transition} from '../Transition';
 import { TwoScreens } from '../TwoScreens';
-import audio from './audio.mp4';
+import audio from './duck.mp3';
+import audio2 from './rainforest.mp3';
 
 
 export const Welcome: React.FC<{
@@ -18,7 +19,7 @@ export const Welcome: React.FC<{
 		require(`./${name}/` + (f + 1) + '.png');
 
 	return (
-		<div style={{flex: 1, display: 'flex', backgroundColor: '#72986d'}}>
+		<div style={{flex: 1, display: 'flex', backgroundColor: '#415d28'}}>
 			<Series>
 				<Series.Sequence durationInFrames={65}>
 					<Title line1="Welcome to" line2="Coach Ducky Duck" />
@@ -88,7 +89,8 @@ export const Welcome: React.FC<{
 				</Series.Sequence> */}
 			</Series>
 			
-			<Audio src={audio} />
+			<Audio src={audio} volume={2.3}/>
+			<Audio src={audio2} volume={0.1} />
 		</div>
 	);
 };
