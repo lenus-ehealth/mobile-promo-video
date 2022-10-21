@@ -48,6 +48,7 @@ const ScreenShowcase: React.FC<Props> = ({
 			<div
 				style={{
 					fontSize: 80,
+					fontFamily: 'Comfortaa',
 					fontWeight: 'bold',
 					width: '100%',
 					position: 'absolute',

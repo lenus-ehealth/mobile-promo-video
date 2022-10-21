@@ -6,8 +6,8 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Phone} from '../RealStickers/Phone';
-import screen2 from '../RealStickers/screen2.png';
-import screen7 from '../RealStickers/screen7.png';
+import screen2 from '../RealStickers/screen.png';
+import screen7 from '../RealStickers/screen.png';
 
 export const TwoScreens: React.FC = () => {
 	const {fps} = useVideoConfig();
@@ -45,7 +45,7 @@ export const TwoScreens: React.FC = () => {
 						image={screen2}
 						baseScale={1.3}
 						rotate={[-x, -y, -z]}
-						scale={1}
+						scale={0.5}
 					/>
 				</AbsoluteFill>
 				<AbsoluteFill
@@ -53,7 +53,7 @@ export const TwoScreens: React.FC = () => {
 						left: '25%',
 					}}
 				>
-					<Phone image={screen7} baseScale={1.3} rotate={[x, y, z]} scale={1} />
+					<Phone image={screen7} baseScale={1.3} rotate={[x, y, z]} scale={0.5} />
 				</AbsoluteFill>
 			</AbsoluteFill>
 		</AbsoluteFill>

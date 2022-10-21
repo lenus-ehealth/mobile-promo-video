@@ -6,6 +6,7 @@ import RealStickers from '../RealStickers';
 import ScreenShowcase from '../ScreenShowcase';
 import {Title} from '../Title';
 import {Transition} from '../Transition';
+import { TwoScreens } from '../TwoScreens';
 import audio from './audio.mp4';
 
 
@@ -19,7 +20,7 @@ export const Welcome: React.FC<{
 	return (
 		<div style={{flex: 1, display: 'flex', backgroundColor: '#72986d'}}>
 			<Series>
-				<Series.Sequence durationInFrames={70}>
+				<Series.Sequence durationInFrames={65}>
 					<Title line1="Welcome to" line2="Coach Ducky Duck" />
 				</Series.Sequence>
 				

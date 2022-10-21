@@ -5,6 +5,7 @@ import {PhoneCircle} from './PhoneCircle';
 import {RealStill} from './RealStickers/RealStill';
 import {TwoScreens} from './TwoScreens';
 import {Welcome} from './Welcome';
+import './font.css';
 
 export const RemotionVideo: React.FC = () => {
 	return (

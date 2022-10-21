@@ -41,9 +41,9 @@ export const Title: React.FC<{
 		>
 			<div
 				style={{
-					fontSize: 110,
-					fontWeight: 'bold',
-					fontFamily: 'SF Pro Text',
+					fontSize: 100,
+					fontWeight: 'bolder',
+					fontFamily: 'Comfortaa',
 				}}
 			>
 				<span
@@ -60,6 +60,7 @@ export const Title: React.FC<{
 						transform: `scale(${secondWord})`,
 						display: 'inline-block',
 						whiteSpace: 'pre',
+						marginTop:50
 					}}
 				>
 					{line2}
